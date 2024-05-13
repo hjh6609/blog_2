@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, {Fragment} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Homepage from "./pages/homepage/Homepage";
+import TopBar from "./components/topbar/TopBar";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import Single from "./pages/single/Single";
+import Write from "./pages/write/Write";
+import Settings from "./pages/settings/Setting";
+import SinglePost from './components/singlePost/SinglePost';
+import Post from './components/post/Post';
+import Posts from './components/posts/Posts';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <TopBar />
+    <Routes>
+      <Route path="/" element={<Homepage/>}/>
+      <Route path="/posts" element={<Homepage/>}/>
+      <Route path="/about" element={<SinglePost/>}/>
+      <Route path="/contact" element={<Posts/>}/>
+      <Route path="/write" element={<Write/>}/>
+      <Route path="/settings" element={<Settings/>}/>
+    </Routes>
+  </Router>
+  
   );
 }
 
