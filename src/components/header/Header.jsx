@@ -9,7 +9,7 @@ export default function Header() {
         </div>
         <img 
           className='headerImg' 
-          src="http://file3.instiz.net/data/file3/2018/02/01/5/8/3/583cca73a98118c21c3e01d06ce88905.jpg" 
+          src={`${process.env.PUBLIC_URL}/imgs/cha.jpg`}
           alt="" 
         />
     </div>

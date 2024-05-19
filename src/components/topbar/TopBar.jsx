@@ -41,7 +41,7 @@ export default function TopBar() {
           <Link className="link" to="/settings">
             <img 
               className="topImg"
-              src="http://file3.instiz.net/data/file3/2018/02/01/2/0/d/20d54d66a2a66022ebf7f2eb97b8e2bf.jpg" 
+              src={`${process.env.PUBLIC_URL}/imgs/jeamin.jpg`} 
               alt="" 
             />
           </Link>
